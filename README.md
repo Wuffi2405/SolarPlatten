@@ -1,0 +1,2 @@
+# SolarPlatten
+Solarplatten Projekt
