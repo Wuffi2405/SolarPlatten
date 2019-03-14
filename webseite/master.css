@@ -1,0 +1,61 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #e5e5e5;
+  width: 100vw;
+  overflow: hidden;
+}
+
+nav {
+  background-color: #1565C0;
+  box-shadow: 0px 10px 7px 0px rgba(194, 194, 194, 1);
+}
+
+nav h1 {
+  margin: 0;
+  padding: 1vh 3vw;
+  color: #FFFFFF;
+}
+
+.box {
+  background-color: #FFFFFF;
+}
+
+#chart {
+  margin: 2vh 5vw;
+  width: 90vw;
+  height: 80vh !important;
+  box-shadow: 5px 5px 5px 0px rgba(150, 150, 150, 0.7);
+}
+
+#chart canvas {
+  height: 100% !important;
+}
+
+#options {
+  margin: 2vh 5vw;
+  width: 90vw;
+  box-shadow: 5px 5px 5px 0px rgba(150, 150, 150, 0.7);
+}
+
+#options label {
+  display: inline-block;
+  margin: 1vh 1vw;
+  padding: 2vh 2vw;
+  font-weight: bold;
+  background-color: #FF9800;
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 4px 4px 5px 0px rgba(168,168,168,0.52);
+}
+
+#options label:hover {
+  box-shadow: 4px 4px 5px 0px rgba(168, 168, 168, 0.8);
+}
+
+#options input {
+  display: none;
+}

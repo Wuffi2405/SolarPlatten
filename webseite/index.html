@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Solar Platten - Auswertung</title>
+  <!-- <script src="jquery-3.3.1.js"></script> -->
+  <link rel="stylesheet" href="master.css">
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="lib/Chart.js"></script>
+</head>
+
+<body>
+  <!-- <h1>Überschrift</h1> -->
+  <nav>
+    <h1>Auswertung Solar Platten</h1>
+  </nav>
+  <div id="chart" class="box">
+    <canvas id="myChart" backgroundColor="#FFFFFF"></canvas>
+  </div>
+
+  <div id="options" class="box">
+    <label class="fileContainer">
+      Datei hochladen
+      <input type="file" accept=".csv"/>
+    </label>
+    <!-- <input type="file" name="dataset" value="dataset" accept=".csv"> -->
+  </div>
+
+  <script src="DataHandler.js"></script>
+</body>
+
+</html>
