@@ -42,21 +42,21 @@ while True:
 	if DEBUG == False:	
 		data = arduino.readline()[:-2]
 	else:
-		data = ',09.06.2019 16:45:49,"0,00","3,18","0,00","0,00",0,0,1,0000,0651,0000,0000,01,""'
-	
-	#
-	#Datenzeile wird geteilt
-	#wichtige Daten werden in Variable gespeichert
-	#
-	x = data.split('"')
-	value = x[0].replace(',', '') + "," + x[1].replace(',', '.') + "," + x[3].replace(',', '.')
-	print("[INFO] Datenzeile: " + value)
-	
-	date = x[0].split(" ")
-	today = date[0].replace(",", "")
-	print("[LOL] heutiges Datum: " + today)
+		data = ',10.06.2019 16:45:49,"0,00","3,18","0,00","0,00",0,0,1,0000,0651,0000,0000,01,""'
 		
-	if data:
+	if len(data) == LENGTH:
+		#
+		#Datenzeile wird geteilt
+		#wichtige Daten werden in Variable gespeichert
+		#
+		x = data.split('"')
+		value = x[0].replace(',', '') + "," + x[1].replace(',', '.') + "," + x[3].replace(',', '.')
+		print("[INFO] Datenzeile: " + value)
+	
+		date = x[0].split(" ")
+		today = date[0].replace(",", "")
+		print("[LOL] heutiges Datum: " + today)
+	
 		#
 		#rohe Daten >> messungen_roh.csv
 		#
