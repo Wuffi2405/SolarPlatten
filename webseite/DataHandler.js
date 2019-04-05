@@ -43,33 +43,36 @@ function processData(allText) {
    */
   allTextLines = allText.split(/\r\n|\n/);
 
-  // console.log(allTextLines);
-
   /**
    * erstellung 2d Array
    */
   for (var i = 0; i < allTextLines.length - 1; i++) {
-    lines.push(allTextLines[i].split(','));
+    if(!allTextLines[i].length == 0){
+      lines.push(allTextLines[i].split(','));
+    }
   }
+  // console.log(allTextLines);
+  // console.log("----------");
+  // console.log(lines);
 
   /**
    * Datenzeilen werden den Wertelisten hinzugefügt
    */
-  for (var i = 0; i < allTextLines.length - 1; i++) {
+  for (var i = 0; i < lines.length - 1; i++) {
     var h = lines[i][0];
     h = h.replace('"', '');
     h = h.replace('"', '');
     labelDate.push(h);
   }
 
-  for (var i = 0; i < allTextLines.length - 1; i++) {
+  for (var i = 0; i < lines.length - 1; i++) {
     var h = lines[i][1];
     h = h.replace('"', '');
     h = h.replace('"', '');
     spannungA.push(h);
   }
 
-  for (var i = 0; i < allTextLines.length - 1; i++) {
+  for (var i = 0; i < lines.length - 1; i++) {
     var h = lines[i][2];
     h = h.replace('"', '');
     h = h.replace('"', '');
