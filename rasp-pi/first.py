@@ -48,7 +48,7 @@ while True:
 	else:
 		data = ',29.03.2019 16:46:44,"0,00","3,16","0,00","0,00",0,0,0,0000,0647,0000,0000,026,",29.03.2019 16:47:23,REPEAT:"'
 		
-	if data[79] == '"':
+	if len(data)>=79 and data[79] == '"':
 		#print(data[79])
 	
 		#
@@ -71,7 +71,7 @@ while True:
 			#
 			#rohe Daten >> messungen_roh.csv
 			#
-			f = open(PATH + '\messungen_roh.csv', 'a')
+			f = open(PATH + '/messungen_roh.csv', 'a')
 			#f.write('\n' + value.decode('utf-8'))
 			f.write('\n' + data)
 			f.close()
@@ -79,7 +79,7 @@ while True:
 			#
 			#optimierte Daten >> messungen.csv
 			#
-			f = open(PATH + '\messungen.csv', 'a')
+			f = open(PATH + '/messungen.csv', 'a')
 			#f.write('\n' + value.decode('utf-8'))
 			f.write('\n' + value)
 			f.close()
